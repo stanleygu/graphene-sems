@@ -6,7 +6,7 @@
   <script>
 Dropzone.autoDiscover = false;
   </script>
-  <div ui-jq="dropzone" ui-options="dropzoneConfig" class="dropzone">
+  <div ui-jq="dropzone" ui-options="dropzoneConfig" class="dropzone well">
     <div class="dz-message text-center">
       <h1>Upload SEMS Graph Output</h1>
       <h3>(Drop file here or click!)</h3>
@@ -17,7 +17,17 @@ Dropzone.autoDiscover = false;
 <div class="row">
   <h1 class="pull-center">Layout</h1>
   <h4 class="text-muted">Hover over nodes to view connected neighbors</h4>
-  <sg-graphene imports="exports" template="views/template.html"></sg-graphene>
+  Allow unstick <input type="checkbox" ng-model="exports.allowUnstick"></input>
+  <!--Show reaction nodes <input type="checkbox" ng-model="exports.showReactionNodes"></input>
+  Show arcs <input type="checkbox" ng-model="exports.showArcs"></input>
+  Show Modifiers <input type="checkbox" ng-model="linkModifiers"></input>-->
+  Charge <input type="number" ng-model="charge" step="10" min="-5000" max="0"></input>
+  Gravity <input type="number" ng-model="gravity" min="0" max="1" step="0.1"></input>
+  Link Distance <input type="number" ng-model="linkDistance" min="0" max="100" step="1"></input>
+  Zoom <input type="checkbox" ng-model="exports.zoom"></input>
+  <div class="well">
+    <sg-graphene imports="exports" template="views/template.html"></sg-graphene>
+  </div>
 </div>
 <div class="footer">
   <p>Stanley Gu (2014)</p>

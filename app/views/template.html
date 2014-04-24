@@ -1,5 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" ng-controller="LayoutCtrl">
+  <style>
+    svg .selected {
+      stroke: #FF0000;
+    }
+    svg marker {
+      overflow: visible;
+    }
+  </style>
   <defs>
+    <marker style="overflow:visible" case-sensitive="refX,refY" id="arrow" viewBox="0 0 10 10" ng-attr-refX="{{-2}}" ng-attr-refY="{{0}}" markerWidth="10" markerHeight="10" orient="auto">
+      <path fill="black" transform="rotate(-90)" ng-attr-d="{{arrow({size: 10, type: 'triangle-down'})}}"></path>
+    <marker style="overflow:visible" id="arrow2" viewBox="0 -5 10 10" refX="15" refY="-1.5" markerWidth="6" markerWidth="6" orient="auto">
+      <path d="M0,-5L10,0L0,5"></path>
+    </marker>
     <linearGradient id="gradient">
       <stop offset="5%" stop-color="#FFDC9E"></stop>
       <stop offset="95%" stop-color="#FFF"></stop>
@@ -9,43 +22,59 @@
       <stop offset="95%" stop-color="#FFF"></stop>
     </linearGradient>
   </defs>
-  <g ng-repeat="e in imports.edges">
-    <line
-    stroke="black"
-    ng-attr-x1="{{e.source.x}}"
-    ng-attr-y1="{{e.source.y}}"
-    ng-attr-x2="{{e.target.x}}"
-    ng-attr-y2="{{e.target.y}}"
-    ></line>
-  </g>
+  <g ng-attr-transform="translate({{translate.x || 0}}, {{translate.y || 0}})scale({{scale || 1}})">
+    <g ng-repeat="e in imports.edges"
+      ng-attr-opacity="{{e.opacity || 1}}"
+      >
+      <line
+      stroke="black"
+      ng-attr-x1="{{e.x1}}"
+      ng-attr-y1="{{e.y1}}"
+      ng-attr-x2="{{e.x2}}"
+      ng-attr-y2="{{e.y2}}"
+      marker-end="url(#arrow)"
+      ></line>
+    </g>
 
-  <g ng-repeat="node in imports.nodes"
-  draggable
-  ng-attr-transform="translate({{node.x}},{{node.y}})"
-  >
-    <ellipse 
-    ng-if="_.contains(node.classes, 'species')"
-    fill="url(#gradient)"
-    stroke="orange"
-    stroke-width="3px"
-    cx="0" cy="0" rx="30" ry="10"
-    ></ellipse>
-    <rect
-      ng-if="_.contains(node.classes, 'reaction')"
-      stroke="blue"
-      fill="url(#blueGradient)"
-      x="-11"
-      y="-11"
-      width="22"
-      height="22"
+    <g ng-repeat="node in imports.nodes"
+    draggable
+    ng-attr-transform="translate({{node.x}},{{node.y}})"
+    tooltip-html-unsafe="{{node.data | jsonToHtmlTable }}"
+    tooltip-trigger="mouseenter"
+    tooltip-placement="right"
+    tooltip-append-to-body="true"
+    ng-attr-opacity="{{node.opacity || 1}}"
+    ng-mouseover="imports.events.mouseover(node, this, $event)"
+    ng-mouseleave="imports.events.mouseleave(node, this, $event)"
     >
-    </rect>
-    <text style="font-size: 12px;
-      font-family: Georgia;
-      font-weight: bolder;
-      text-anchor: middle;
-      dominant-baseline: middle;
-      ">{{node.data.id}}</text>
+      <ellipse 
+      ng-if="_.contains(node.classes, 'species')"
+      ng-class="{selected: node.fixed}" 
+      fill="url(#gradient)"
+      stroke="orange"
+      stroke-width="3px"
+      cx="0" cy="0" 
+      ng-attr-rx="{{node.width/2}}"
+      ng-attr-ry="{{node.height/2}}"
+      ></ellipse>
+      <rect
+        ng-if="_.contains(node.classes, 'reaction')"
+        ng-class="{selected: node.fixed}" 
+        stroke="blue"
+        fill="url(#blueGradient)"
+        ng-attr-x="{{-node.width/2}}"
+        ng-attr-y="{{-node.width/2}}"
+        ng-attr-width="{{node.width}}"
+        ng-attr-height="{{node.height}}"
+      >
+      </rect>
+      <text style="font-size: 12px;
+        font-family: Georgia;
+        font-weight: bolder;
+        text-anchor: middle;
+        dominant-baseline: middle;
+        ">{{node.data.id}}</text>
+    </g>
   </g>
 
 

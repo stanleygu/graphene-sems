@@ -12,9 +12,10 @@
     "angular-sanitize": "1.2.15",
     "angular-route": "1.2.15",
     "graphene": "https://github.com/stanleygu/graphene.git#c885ed7ae6611910bcff7df03816862efd58f161",
-    "dropzone": "~3.8.4",
+    "dropzone": "3.8.4",
     "angular-bootstrap": "~0.10.0",
-    "fontawesome": "~4.0.3"
+    "fontawesome": "~4.0.3",
+    "ui-utils": "~0.1.1"
   },
   "devDependencies": {
     "angular-mocks": "1.2.15",

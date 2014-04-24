@@ -7,7 +7,8 @@ angular
     'ngSanitize',
     'ngRoute',
     'sg.graphene',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ui.jq'
   ])
   .config(function ($routeProvider) {
     $routeProvider
