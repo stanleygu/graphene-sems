@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" ng-controller="LayoutCtrl">
+  <defs>
+    <linearGradient id="gradient">
+      <stop offset="5%" stop-color="#FFDC9E"></stop>
+      <stop offset="95%" stop-color="#FFF"></stop>
+    </linearGradient>
+    <linearGradient id="blueGradient">
+      <stop offset="5%" stop-color="#B0C0FF"></stop>
+      <stop offset="95%" stop-color="#FFF"></stop>
+    </linearGradient>
+  </defs>
+  <g ng-repeat="e in imports.edges">
+    <line
+    stroke="black"
+    ng-attr-x1="{{e.source.x}}"
+    ng-attr-y1="{{e.source.y}}"
+    ng-attr-x2="{{e.target.x}}"
+    ng-attr-y2="{{e.target.y}}"
+    ></line>
+  </g>
+
+  <g ng-repeat="node in imports.nodes"
+  draggable
+  ng-attr-transform="translate({{node.x}},{{node.y}})"
+  >
+    <ellipse 
+    ng-if="_.contains(node.classes, 'species')"
+    fill="url(#gradient)"
+    stroke="orange"
+    stroke-width="3px"
+    cx="0" cy="0" rx="30" ry="10"
+    ></ellipse>
+    <rect
+      ng-if="_.contains(node.classes, 'reaction')"
+      stroke="blue"
+      fill="url(#blueGradient)"
+      x="-11"
+      y="-11"
+      width="22"
+      height="22"
+    >
+    </rect>
+    <text style="font-size: 12px;
+      font-family: Georgia;
+      font-weight: bolder;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      ">{{node.data.id}}</text>
+  </g>
+
+
+</svg>

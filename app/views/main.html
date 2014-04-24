@@ -1,36 +1,24 @@
 <div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-  </ul>
-  <h3 class="text-muted">graphene sems</h3>
+  <ul class="nav nav-pills pull-right"></ul>
+  <h3 class="text-muted">Network Viewer</h3>
 </div>
-
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div class="row">
+  <script>
+Dropzone.autoDiscover = false;
+  </script>
+  <div ui-jq="dropzone" ui-options="dropzoneConfig" class="dropzone">
+    <div class="dz-message text-center">
+      <h1>Upload SEMS Graph Output</h1>
+      <h3>(Drop file here or click!)</h3>
+      <h4 class="text-muted">A default data set has already been loaded</h4>
+    </div>
+  </div>
 </div>
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<div class="row">
+  <h1 class="pull-center">Layout</h1>
+  <h4 class="text-muted">Hover over nodes to view connected neighbors</h4>
+  <sg-graphene imports="exports" template="views/template.html"></sg-graphene>
 </div>
-
 <div class="footer">
-  <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+  <p>Stanley Gu (2014)</p>
 </div>
