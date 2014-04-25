@@ -302,6 +302,7 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
+            'sample.json',
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
@@ -365,6 +366,20 @@ module.exports = function (grunt) {
     //   dist: {}
     // },
 
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'https://github.com/stanleygu/graphene-sems.git',
+          branch: 'gh-pages'
+        }
+      }
+    },
     // Test settings
     karma: {
       unit: {
@@ -424,5 +439,10 @@ module.exports = function (grunt) {
     'newer:jshint',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'default',
+    'buildcontrol:pages'
   ]);
 };
