@@ -1,0 +1,797 @@
+{
+    "elements": {
+        "edges": [
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s19",
+                    "target": "r19"
+                }
+            },
+            {
+                "classes": "bives-unkwnmod bives-inserted",
+                "data": {
+                    "source": "s18",
+                    "target": "r19"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s9",
+                    "target": "r17"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r17",
+                    "target": "s19"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s14",
+                    "target": "r2"
+                }
+            },
+            {
+                "classes": "bives-unkwnmod",
+                "data": {
+                    "source": "s3",
+                    "target": "r2"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s21",
+                    "target": "r25"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s14",
+                    "target": "r25"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r25",
+                    "target": "s15"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s12",
+                    "target": "r6"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r6",
+                    "target": "s7"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s6",
+                    "target": "r22"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r22",
+                    "target": "s22"
+                }
+            },
+            {
+                "classes": "bives-unkwnmod",
+                "data": {
+                    "source": "s11",
+                    "target": "r22"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s21",
+                    "target": "r23"
+                }
+            },
+            {
+                "classes": "bives-unkwnmod bives-inserted",
+                "data": {
+                    "source": "s5",
+                    "target": "r23"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s15",
+                    "target": "r13"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r13",
+                    "target": "s14"
+                }
+            },
+            {
+                "classes": "bives-unkwnmod bives-inserted",
+                "data": {
+                    "source": "s5",
+                    "target": "r13"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s12",
+                    "target": "r1"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r1",
+                    "target": "s14"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s14",
+                    "target": "r14"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s7",
+                    "target": "r20"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s14",
+                    "target": "r20"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r20",
+                    "target": "s12"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s2",
+                    "target": "r8"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r8",
+                    "target": "s20"
+                }
+            },
+            {
+                "classes": "bives-unkwnmod",
+                "data": {
+                    "source": "s11",
+                    "target": "r8"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s12",
+                    "target": "r4"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r4",
+                    "target": "s14"
+                }
+            },
+            {
+                "classes": "bives-unkwnmod bives-inserted",
+                "data": {
+                    "source": "s5",
+                    "target": "r4"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s21",
+                    "target": "r3"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r3",
+                    "target": "s7"
+                }
+            },
+            {
+                "classes": "bives-unkwnmod bives-inserted",
+                "data": {
+                    "source": "s16",
+                    "target": "r3"
+                }
+            },
+            {
+                "classes": "bives-unkwnmod bives-inserted",
+                "data": {
+                    "source": "s20",
+                    "target": "r3"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r24",
+                    "target": "s19"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r11",
+                    "target": "s14"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s15",
+                    "target": "r12"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r12",
+                    "target": "s21"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s19",
+                    "target": "r10"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s14",
+                    "target": "r10"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r10",
+                    "target": "s9"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s4",
+                    "target": "r21"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r21",
+                    "target": "s18"
+                }
+            },
+            {
+                "classes": "bives-unkwnmod",
+                "data": {
+                    "source": "s11",
+                    "target": "r21"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s15",
+                    "target": "r5"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r5",
+                    "target": "s14"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s7",
+                    "target": "r9"
+                }
+            },
+            {
+                "classes": "bives-unkwnmod bives-inserted",
+                "data": {
+                    "source": "s5",
+                    "target": "r9"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r16",
+                    "target": "s21"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s17",
+                    "target": "r15"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r15",
+                    "target": "s5"
+                }
+            },
+            {
+                "classes": "bives-unkwnmod",
+                "data": {
+                    "source": "s22",
+                    "target": "r15"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s1",
+                    "target": "r7"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r7",
+                    "target": "s16"
+                }
+            },
+            {
+                "classes": "bives-unkwnmod",
+                "data": {
+                    "source": "s11",
+                    "target": "r7"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "s9",
+                    "target": "r18"
+                }
+            },
+            {
+                "classes": "bives-ioedge",
+                "data": {
+                    "source": "r18",
+                    "target": "s14"
+                }
+            }
+        ],
+        "nodes": [
+            {
+                "classes": "compartment",
+                "data": {
+                    "id": "c1",
+                    "name": "Cell"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s15",
+                    "name": "Cdc13_Cdc2_Rum1",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s21",
+                    "name": "Cdc13_Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s3",
+                    "name": "S-phasePromotingFactor",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s5",
+                    "name": "ubiquitinProtease1",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s4",
+                    "name": "BoundUbiquitinProtease2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s7",
+                    "name": "Cdc13_P-Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s1",
+                    "name": "BoundCdc25",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s2",
+                    "name": "BoundWee1",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s19",
+                    "name": "Cig2_Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s10",
+                    "name": "TotalCig2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s16",
+                    "name": "Cdc25",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s12",
+                    "name": "Cdc13_P-Cdc2_Rum1",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s8",
+                    "name": "TotalRum1",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s9",
+                    "name": "Cig2_Cdc2_Rum1",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s22",
+                    "name": "IntermediaryEnzyme",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s6",
+                    "name": "BoundIntermediaryEnzyme",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s13",
+                    "name": "TotalCdc13",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s11",
+                    "name": "M-phasePromotingFactor",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s18",
+                    "name": "ubiquitinProtease2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s17",
+                    "name": "BoundUbiquitinProtease1",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s14",
+                    "name": "FreeRum1",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "species",
+                "data": {
+                    "id": "s20",
+                    "name": "Wee1",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r19",
+                    "name": "Cig2 degradation in Cig2_Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction",
+                "data": {
+                    "id": "r17",
+                    "name": "Rum1 degradation in Rum1_Cig2_Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction",
+                "data": {
+                    "id": "r2",
+                    "name": "Rum1 degradation by SPF",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r25",
+                    "name": "binding of Rum1 with Cdc13_Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction",
+                "data": {
+                    "id": "r6",
+                    "name": "Rum1 degradation in Rum1_Cdc13_P-Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r22",
+                    "name": "IE production & degradation",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r23",
+                    "name": "Cdc13 degradation in Cdc13_Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r13",
+                    "name": "UbE mediated degradation of Cdc13_Cdc2 in Rum1_Cdc13_Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction",
+                "data": {
+                    "id": "r1",
+                    "name": "Cdc13 degradation in Rum1_Cdc13_P-Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction",
+                "data": {
+                    "id": "r14",
+                    "name": "Rum1 degradation in solution",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r20",
+                    "name": "binding of Rum1 with Cdc13_P-Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r8",
+                    "name": "Wee1 production & degradation",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r4",
+                    "name": "UbE mediated degradation of Cdc13_Cdc2 in Rum1_Cdc13_P-Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r3",
+                    "name": "Cdc2 phosphorylation",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction",
+                "data": {
+                    "id": "r24",
+                    "name": "Cig2_Cdc2 creation",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction",
+                "data": {
+                    "id": "r11",
+                    "name": "Rum1 creation",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction",
+                "data": {
+                    "id": "r12",
+                    "name": "Rum1 degradation in Rum1_Cdc13_Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r10",
+                    "name": "Binding of Rum1 to Cig2_Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r21",
+                    "name": "UbE2 production & degradation",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction",
+                "data": {
+                    "id": "r5",
+                    "name": "Cdc13 degradation in Rum1_Cdc13_Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r9",
+                    "name": "Cdc13 degradation in Cdc13_P-Cdc2",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction",
+                "data": {
+                    "id": "r16",
+                    "name": "Cdc13_Cdc2 creation",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r15",
+                    "name": "UbE production & degradation",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction bives-modified",
+                "data": {
+                    "id": "r7",
+                    "name": "Cdc25 production & degradation",
+                    "parent": "c1"
+                }
+            },
+            {
+                "classes": "reaction",
+                "data": {
+                    "id": "r18",
+                    "name": "Cig2 degradation in Rum1_Cig2_Cdc2",
+                    "parent": "c1"
+                }
+            }
+        ]
+    }
+}
