@@ -28,6 +28,8 @@ Dropzone.autoDiscover = false;
   Rendering FPS <input type="number" ng-model="renderFps" min="1" max="50" step="1"></input>
   <button type="button" class="btn btn-primary" ng-click="runLayout()">Re-run Layout</button>
   <div class="well">
+    <spinner template="threeBounce" color="black" screen-color="black" screen-opacity="0.5" 
+    loading="{{loading}}"></spinner>
     <sg-graphene imports="exports" template="views/template.html"></sg-graphene>
   </div>
 </div>

@@ -15,7 +15,8 @@
     "dropzone": "3.8.4",
     "angular-bootstrap": "~0.10.0",
     "fontawesome": "~4.0.3",
-    "ui-utils": "~0.1.1"
+    "ui-utils": "~0.1.1",
+    "spinners": "stanleygu/spinners"
   },
   "devDependencies": {
     "angular-mocks": "1.2.15",

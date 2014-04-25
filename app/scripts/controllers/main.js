@@ -175,7 +175,13 @@ angular.module('grapheneSemsApp')
         .on('tick', function() {
           throttledDigest();
         })
+        .on('end', function() {
+          $scope.loading = false;
+          $scope.$digest();
+        })
         .start();
+
+      $scope.loading = true;
 
       $scope.exports = {
         nodes: nodes,

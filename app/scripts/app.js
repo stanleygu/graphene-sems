@@ -8,7 +8,8 @@ angular
     'ngRoute',
     'sg.graphene',
     'ui.bootstrap',
-    'ui.jq'
+    'ui.jq',
+    'stanleygu.spinners'
   ])
   .config(function ($routeProvider) {
     $routeProvider
