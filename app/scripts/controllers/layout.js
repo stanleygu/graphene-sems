@@ -8,6 +8,10 @@ angular.module('grapheneSemsApp')
     $scope.height = 700;
     $scope.width = 700;
 
+    $scope.show = {
+      id: true
+    };
+
     // COMPUTED LINK PROPERTY
     var updateLinkPosition = function(link) {
       var targetToSource = sgGeo.getLineIntersectionWithRectangle({

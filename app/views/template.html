@@ -1,7 +1,6 @@
 <div ng-controller="LayoutCtrl">
   <div>
-    <button type="button" class="btn btn-primary" ng-model="show.detail" btn-checkbox>Details</button>
-    <button type="button" class="btn btn-primary" ng-model="show.diff" btn-checkbox>Diff</button>
+    Show: <button type="button" class="btn btn-primary" ng-model="show.id" btn-checkbox>Node IDs</button>
   </div>
 <svg xmlns="http://www.w3.org/2000/svg">
   <style>
@@ -66,14 +65,14 @@
     ng-mouseleave="imports.events.mouseleave(node, this, $event)"
     >
       <ellipse 
-      ng-if="_.contains(node.classes, 'species')"
-      ng-class="{selected: node.fixed}" 
-      ng-style="{fill: node.color}"
-      fill="white"
-      stroke="black"
-      cx="0" cy="0" 
-      ng-attr-rx="{{node.width/2}}"
-      ng-attr-ry="{{node.height/2}}"
+        ng-if="_.contains(node.classes, 'species')"
+        ng-class="{selected: node.fixed}" 
+        ng-style="{fill: node.color}"
+        fill="white"
+        stroke="black"
+        cx="0" cy="0" 
+        ng-attr-rx="{{node.width/2}}"
+        ng-attr-ry="{{node.height/2}}"
       ></ellipse>
       <rect
         ng-if="_.contains(node.classes, 'reaction')"
@@ -85,14 +84,16 @@
         ng-attr-y="{{-node.width/2}}"
         ng-attr-width="{{node.width}}"
         ng-attr-height="{{node.height}}"
-      >
+        >
       </rect>
-      <text style="font-size: 12px;
+      <text 
+        ng-if="show.id"
+        style="font-size: 12px;
         font-family: Georgia;
         font-weight: bolder;
         text-anchor: middle;
         dominant-baseline: middle;
-        ">{{node.data.id}}</text>
+        ">{{node.data.id | truncateTo: 6}}</text>
     </g>
   </g>
 
