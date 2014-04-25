@@ -12,6 +12,7 @@ angular.module('grapheneSemsApp')
     $scope.charge = -1000;
     $scope.gravity = 0.0;
     $scope.linkDistance = 5;
+    $scope.renderFps = 20;
 
     /*
      * Event listeners
@@ -94,73 +95,104 @@ angular.module('grapheneSemsApp')
       $scope.data = data;
     });
 
+    var getColor = function(n) {
+      if (_.contains(n, 'bives-modified')) {
+        return 'yellow';
+      } else if (_.contains(n, 'bives-inserted')) {
+        return 'green';
+      } else if (_.contains(n, 'bives-deleted')) {
+        return 'red';
+      }
+    };
+
+    var getMarker = function(c) {
+      if (_.contains(c, 'bives-ioedge')) {
+        return 'arrow';
+      } else if (_.contains(c, 'bives-unkwnmod')) {
+        return 'diamond';
+      } else if (_.contains(c, 'bives-stimulator')) {
+        return 'emptyArrow';
+      } else if (_.contains(c, 'bives-inhibitor')) {
+        return 'flat';
+      }
+    };
+
+    $scope.runLayout = function() {
+      var nodes = [];
+      var edges = [];
+      var nodeLookup = {};
+      var edgeLookup = {};
+
+      _.each($scope.data.elements.nodes, function(n) {
+        if (_.contains(n.classes, 'reaction') || _.contains(n.classes, 'species')) {
+          nodeLookup[n.data.id] = n;
+          edgeLookup[n.data.id] = {
+            to: [],
+            from: []
+          };
+          nodes.push(n);
+
+          if (_.contains(n.classes, 'reaction')) {
+            n.width = 22;
+            n.height = 22;
+          } else {
+            n.width = 60;
+            n.height = 20;
+          }
+
+          n.color = getColor(n.classes);
+        }
+      });
+
+      _.each($scope.data.elements.edges, function(e) {
+        var source = nodeLookup[e.data.source];
+        var target = nodeLookup[e.data.target];
+        if (source && target) {
+          // makes sure that source and target is in the graph
+          e.source = source;
+          e.target = target;
+          edges.push(e);
+          edgeLookup[source.data.id].from.push(e);
+          edgeLookup[target.data.id].to.push(e);
+
+          e.color = getColor(e.classes);
+          e.marker = getMarker(e.classes);
+        }
+      });
+
+      $scope.force = d3.layout.force()
+        .charge($scope.charge || -700)
+        .linkDistance($scope.linkDistance || 40)
+        .gravity($scope.gravity || 0.1)
+        .size([$scope.width || 800, $scope.height || 800]);
+
+      var throttledDigest = _.throttle(function() {
+        $scope.$digest();
+      }, 1000 / $scope.renderFps);
+      $scope.force
+        .nodes(nodes)
+        .links(edges)
+        .on('tick', function() {
+          throttledDigest();
+        })
+        .start();
+
+      $scope.exports = {
+        nodes: nodes,
+        edges: edges,
+        force: $scope.force,
+        nodeLookup: nodeLookup,
+        edgeLookup: edgeLookup,
+        zoom: $scope.zoom,
+        events: $scope.events,
+        allowUnstick: true
+      };
+    };
+
     $scope.$watch('data', function(newVal) {
       if (newVal) {
         $log.info('Received new network', newVal);
-        var nodes = [];
-        var edges = [];
-        var nodeLookup = {};
-        var edgeLookup = {};
-
-        _.each($scope.data.elements.nodes, function(n) {
-          if (_.contains(n.classes, 'reaction') || _.contains(n.classes, 'species')) {
-            nodeLookup[n.data.id] = n;
-            edgeLookup[n.data.id] = {
-              to: [],
-              from: []
-            };
-            nodes.push(n);
-
-            if (_.contains(n.classes, 'reaction')) {
-              n.width = 22;
-              n.height = 22;
-            } else {
-              n.width = 60;
-              n.height = 20;
-            }
-          }
-        });
-
-        _.each($scope.data.elements.edges, function(e) {
-          var source = nodeLookup[e.data.source];
-          var target = nodeLookup[e.data.target];
-          if (source && target) {
-            // makes sure that source and target is in the graph
-            e.source = source;
-            e.target = target;
-            edges.push(e);
-            edgeLookup[source.data.id].from.push(e);
-            edgeLookup[target.data.id].to.push(e);
-          }
-        });
-
-        $scope.force = d3.layout.force()
-          .charge($scope.charge || -700)
-          .linkDistance($scope.linkDistance || 40)
-          .gravity($scope.gravity || 0.1)
-          .size([$scope.width || 800, $scope.height || 800]);
-
-        var throttledDigest = _.throttle(function() {
-          $scope.$digest();
-        }, 500);
-        $scope.force
-          .nodes(nodes)
-          .links(edges)
-          .on('tick', function() {
-            throttledDigest();
-          })
-          .start();
-
-        $scope.exports = {
-          nodes: nodes,
-          edges: edges,
-          force: $scope.force,
-          nodeLookup: nodeLookup,
-          edgeLookup: edgeLookup,
-          zoom: $scope.zoom,
-          events: $scope.events,
-          allowUnstick: true
-        };
+        $scope.runLayout();
       }
     });
     var watchList = ['charge', 'linkDistance', 'gravity'];

@@ -4,7 +4,7 @@ angular.module('grapheneSemsApp')
   .controller('LayoutCtrl', function ($scope, sgGeo) {
     $scope._ = _;
 
-    $scope.spacer = 5;
+    $scope.spacer = 8;
     $scope.height = 700;
     $scope.width = 700;
 
@@ -87,4 +87,5 @@ angular.module('grapheneSemsApp')
         f(node, $scope, $event);
       }
     };
+
   });
