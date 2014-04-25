@@ -32,10 +32,7 @@ angular.module('grapheneSemsApp')
       console.log('Double clicked on ' + node.name);
     };
 
-    var mouseoverNode = function(node, scope, event) {
-
-      var el = event.target;
-      $log.info('mousing over', el);
+    var mouseoverNode = function(node, scope) {
 
       node.opacity = OPACITY.focused;
       _.each(scope.imports.nodes, function(n) {
