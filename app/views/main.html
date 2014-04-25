@@ -17,18 +17,23 @@ Dropzone.autoDiscover = false;
 <div class="row">
   <h1 class="pull-center">Layout</h1>
   <h4 class="text-muted">Hover over nodes to view connected neighbors</h4>
-  Allow unstick:&nbsp;<input type="checkbox" ng-model="exports.allowUnstick"></input>
-  <!--Show reaction nodes <input type="checkbox" ng-model="exports.showReactionNodes"></input>
-  Show arcs <input type="checkbox" ng-model="exports.showArcs"></input>
-  Show Modifiers <input type="checkbox" ng-model="linkModifiers"></input>-->
-  <br/>
-  Charge <input class="form-control" type="number" ng-model="charge" step="10" min="-5000" max="0"></input>
-  Gravity <input class="form-control" type="number" ng-model="gravity" min="0" max="1" step="0.1"></input>
-  Link Distance <input class="form-control" type="number" ng-model="linkDistance" min="0" max="100" step="1"></input>
-  Zoom:&nbsp;<input type="checkbox" ng-model="exports.zoom"></input>
-  <br/>
-  Rendering FPS <input class="form-control" type="number" ng-model="renderFps" min="1" max="50" step="1"></input>
-  <button type="button" class="btn btn-primary" ng-click="runLayout()">Re-run Layout</button>
+
+  <button type="button" class="btn btn-primary" ng-click="showSettings = !showSettings" >
+    <span class="glyphicon glyphicon-cog"></span>Settings</button>
+  <div ng-show="showSettings" class="well">
+    Allow unstick:&nbsp;<input type="checkbox" ng-model="exports.allowUnstick"></input>
+    <!--Show reaction nodes <input type="checkbox" ng-model="exports.showReactionNodes"></input>
+    Show arcs <input type="checkbox" ng-model="exports.showArcs"></input>
+    Show Modifiers <input type="checkbox" ng-model="linkModifiers"></input>-->
+    <br/>
+    Charge <input class="form-control" type="number" ng-model="charge" step="10" min="-5000" max="0"></input>
+    Gravity <input class="form-control" type="number" ng-model="gravity" min="0" max="1" step="0.1"></input>
+    Link Distance <input class="form-control" type="number" ng-model="linkDistance" min="0" max="100" step="1"></input>
+    Zoom:&nbsp;<input type="checkbox" ng-model="exports.zoom"></input>
+    <br/>
+    Rendering FPS <input class="form-control" type="number" ng-model="renderFps" min="1" max="50" step="1"></input>
+    <button type="button" class="btn btn-primary" ng-click="runLayout()">Re-run Layout</button>
+  </div>
   <div class="well">
     <spinner template="threeBounce" color="black" screen-color="black" screen-opacity="0.5" 
     loading="{{loading}}"></spinner>
