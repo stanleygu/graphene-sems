@@ -11,7 +11,7 @@
     "angular-cookies": "1.2.15",
     "angular-sanitize": "1.2.15",
     "angular-route": "1.2.15",
-    "graphene": "https://github.com/stanleygu/graphene.git#c885ed7ae6611910bcff7df03816862efd58f161",
+    "graphene": "https://github.com/stanleygu/graphene.git#203eae1e92073bba423af194a08bb28630909de5",
     "dropzone": "3.8.4",
     "angular-bootstrap": "~0.10.0",
     "fontawesome": "~4.0.3",
