@@ -4,7 +4,7 @@ angular.module('grapheneSemsApp')
   .controller('MainCtrl', function($scope, $http, $log) {
 
     /*
-     * Scope parameters that can be modified
+     * Scope parameters that can be modified by user input
      */
     $scope.zoom = true;
     $scope.width = 1300;
