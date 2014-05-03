@@ -107,7 +107,7 @@
                 }
             },
             {
-                "classes": "bives-unkwnmod bives-inserted",
+                "classes": "bives-stimulator bives-inserted",
                 "data": {
                     "source": "s5",
                     "target": "r23"
