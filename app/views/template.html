@@ -71,6 +71,9 @@
     ng-attr-opacity="{{node.opacity || 1}}"
     ng-mouseover="imports.events.mouseover(node, this, $event)"
     ng-mouseleave="imports.events.mouseleave(node, this, $event)"
+    popover="{{node.data.name}}"
+    popover-trigger="mouseenter"
+    popover-append-to-body="true"
     >
       <ellipse 
         ng-if="_.contains(node.classes, 'species')"
