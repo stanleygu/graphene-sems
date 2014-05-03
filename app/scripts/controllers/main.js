@@ -7,8 +7,8 @@ angular.module('grapheneSemsApp')
      * Scope parameters that can be modified by user input
      */
     $scope.zoom = true;
-    $scope.width = 1300;
-    $scope.height = 1000;
+    $scope.width = 720;
+    $scope.height = 700;
     $scope.charge = -1000;
     $scope.gravity = 0.0;
     $scope.linkDistance = 5;
@@ -170,6 +170,14 @@ angular.module('grapheneSemsApp')
         .nodes(nodes)
         .links(edges)
         .on('tick', function() {
+          if ($scope.height && $scope.width) {
+            _.each(nodes, function(n) {
+              n.x = Math.max(n.width, Math.min($scope.width -
+                n.width, n.x));
+              n.y = Math.max(n.height, Math.min($scope.height -
+                n.height, n.y));
+            });
+          }
           throttledDigest();
         })
         .on('end', function() {
