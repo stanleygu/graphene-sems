@@ -10,6 +10,12 @@
     svg marker {
       overflow: visible;
     }
+    svg line.bives-inserted {
+      stroke: green
+    }
+    svg line.bives-deleted {
+      stroke: red
+    }
   </style>
   <defs>
     <marker style="overflow:visible" case-sensitive="refX,refY" id="arrow" viewBox="0 0 10 10" ng-attr-refX="{{-2}}" ng-attr-refY="{{0}}" markerWidth="10" markerHeight="10" orient="auto">
@@ -55,7 +61,7 @@
       ng-attr-y2="{{e.y2}}"
       ng-attr-marker-end="{{'url(#' + e.marker + ')'}}"
       stroke-width="1.5px"
-      ng-style="{'stroke': e.color}"
+      ng-class="{{e.classes.split(' ')}}"
       ></line>
     </g>
 
