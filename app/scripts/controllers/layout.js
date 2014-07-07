@@ -4,7 +4,7 @@ angular.module('grapheneSemsApp')
   .controller('LayoutCtrl', function ($scope, sgGeo) {
     $scope._ = _;
 
-    $scope.spacer = 8;
+    $scope.spacer = 3;
     $scope.height = 700;
     $scope.width = 700;
 
